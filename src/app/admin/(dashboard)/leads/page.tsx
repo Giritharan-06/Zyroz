@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Filter, Plus, ExternalLink, Bell, Trash2, Edit, Target, TrendingUp, Users, MousePointer2, Globe, ArrowUpRight, CheckCircle2, Clock, Mail, Phone, MessageSquare } from "lucide-react";
+import { Search, Filter, Plus, ExternalLink, Bell, Trash2, Edit, Target, TrendingUp, Users, MousePointer2, Globe, ArrowUpRight, CheckCircle2, Clock, Mail, Phone, MessageSquare, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
 import io from "socket.io-client";
 
