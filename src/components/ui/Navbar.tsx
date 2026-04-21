@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 dark:bg-black/60 backdrop-blur-xl border-b border-slate-200 dark:border-gray-200 dark:border-white/10 py-4" : "bg-transparent py-6"
+        scrolled ? "bg-white/90 dark:bg-[#0f0f0f]/90 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 py-4" : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl">
@@ -56,7 +56,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm tracking-wide transition-colors hover:text-black dark:hover:text-white ${
-                  pathname === link.href ? "text-slate-900 dark:text-white font-medium" : "text-slate-600 dark:text-slate-600 dark:text-white/60"
+                  pathname === link.href ? "text-slate-900 dark:text-white font-medium" : "text-slate-600 dark:text-slate-400"
                 }`}
               >
                 {link.label}
@@ -92,7 +92,7 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-full left-0 right-0 bg-white/95 dark:glass backdrop-blur-xl border-b border-slate-200 dark:border-gray-200 dark:border-white/10 p-6 md:hidden flex flex-col gap-4 shadow-xl z-50"
+          className="absolute top-full left-0 right-0 bg-white/98 dark:bg-[#0f0f0f]/98 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl z-50"
         >
           {links.map((link) => (
             <Link
@@ -100,7 +100,7 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setIsOpen(false)}
               className={`text-lg font-medium transition-colors ${
-                pathname === link.href ? "text-black dark:text-white" : "text-slate-600 dark:text-slate-600 dark:text-white/60 hover:text-black dark:hover:text-white"
+                pathname === link.href ? "text-slate-900 dark:text-white" : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               {link.label}
@@ -109,7 +109,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="mt-4 px-6 py-3 bg-black dark:bg-white text-white dark:text-black text-center font-medium rounded-lg shadow-md"
+            className="mt-4 px-6 py-3.5 bg-black dark:bg-white text-white dark:text-black text-center font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
           >
             Get Started
           </Link>
