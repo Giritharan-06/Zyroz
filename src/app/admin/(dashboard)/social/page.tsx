@@ -145,7 +145,7 @@ export default function SocialMediaPage() {
              <div key={post.id} className="bg-white dark:bg-[#0f0f0f] border border-slate-200 dark:border-white/10 rounded-2xl p-6 shadow-sm hover:border-blue-500 transition-colors group">
                 <div className="flex justify-between items-start mb-4">
                    <div className="flex gap-2">
-                      {post.channels.map(ch => (
+                      {post.channels.map((ch: string) => (
                         <div key={ch} className="w-6 h-6 rounded-md bg-slate-100 dark:bg-white/10 flex items-center justify-center text-[10px] font-bold text-slate-500">
                            {ch}
                         </div>
