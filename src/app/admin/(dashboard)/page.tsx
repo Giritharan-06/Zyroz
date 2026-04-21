@@ -46,7 +46,7 @@ export default async function AdminDashboard() {
     
     // Simulate DB volume from media + logs
     const mediaRes = await query("SELECT COUNT(*) FROM media");
-    dbVolumeGB = (Number(mediaRes.rows[0].count) * 0.15 + totalLeads * 0.01).toFixed(2);
+    dbVolumeGB = Number((Number(mediaRes.rows[0].count) * 0.15 + totalLeads * 0.01).toFixed(2));
   } catch (err) {
     console.error("Database connection missing/failed in admin overview.");
   }
